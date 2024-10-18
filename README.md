@@ -8,10 +8,10 @@ Hệ thống **Bán Nước Hoa Trực Tuyến** là một ứng dụng web full
 - **Bài học:** Qua dự án này, tôi đã học được cách xây dựng hệ thống mua sắm trực tuyến bằng công nghệ C#, xử lý các quy trình bán hàng, quản lý giỏ hàng, và tích hợp các phương thức thanh toán.
 ---
 ## Mục Lục
-- [Cài Đặt](#cai dat)
-- [Cách Sử Dụng](#cach su dung)
-- [Người Thực Hiện](#nguoi thuc hien)
-- [Tính Năng](#tinh nang)
+- [Cài Đặt](#caidat)
+- [Cách Sử Dụng](#cachsudung)
+- [Người Thực Hiện](#nguoithuchien)
+- [Tính Năng](#tinhnang)
 ---
 ## Cài Đặt
 ### Backend (ASP.NET Core)
@@ -68,15 +68,15 @@ Trang Quản Trị:
 
 ---
 ## Người thực hiện
-- **[Nguyễn Đình Tuấn](https://github.com/TunNeeeee) - Trưởng Nhóm/Fullstack
+- **[Nguyễn Đình Tuấn](https://github.com/TunNeeeee)** - Trưởng Nhóm/Fullstack
 - **Nguyễn Quốc Cường** - Frontend
 - **Nguyễn Hoàng Huy** - Frontend
 ---
 ## Tính Năng
-Đăng nhập/Đăng xuất bằng OAuth2 với Google/Facebook
-Xác thực JWT
-Tìm kiếm sản phẩm nước hoa và lọc theo thương hiệu, loại mùi hương, giá cả
-Giỏ hàng và thanh toán bảo mật
-Quản lý đơn hàng và sản phẩm cho quản trị viên
-Tích hợp phương thức thanh toán qua các cổng thanh toán trực tuyến
-Thiết kế đáp ứng trên cả thiết bị di động và máy tính
+- Đăng nhập/Đăng xuất bằng OAuth2 với Google/Facebook
+- Xác thực JWT
+- Tìm kiếm sản phẩm nước hoa và lọc theo thương hiệu, loại mùi hương, giá cả
+- Giỏ hàng và thanh toán bảo mật
+- Quản lý đơn hàng và sản phẩm cho quản trị viên
+- Tích hợp phương thức thanh toán qua các cổng thanh toán trực tuyến
+- Thiết kế đáp ứng trên cả thiết bị di động và máy tính
