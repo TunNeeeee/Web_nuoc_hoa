@@ -1,5 +1,5 @@
-# **Hệ Thống Bán Nước Hoa Trực Tuyến**
-**Mô Tả**
+## **Hệ Thống Bán Nước Hoa Trực Tuyến**
+# **Mô Tả**
 Hệ thống Bán Nước Hoa Trực Tuyến là một ứng dụng web full-stack được phát triển bằng C# và ASP.NET Core cho backend, với HTML/CSS/JavaScript cho frontend. Hệ thống này cho phép người dùng tìm kiếm, lọc các sản phẩm nước hoa theo thương hiệu, loại mùi hương, giá cả và thực hiện mua hàng một cách dễ dàng. Ngoài ra, trang web cung cấp tính năng quản lý sản phẩm và đơn hàng cho quản trị viên.
 
 - **Động lực:** Việc xây dựng website này xuất phát từ nhu cầu mua sắm trực tuyến ngày càng tăng của người tiêu dùng, đặc biệt là trong lĩnh vực nước hoa cao cấp.
