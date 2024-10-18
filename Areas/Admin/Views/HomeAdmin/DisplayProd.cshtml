@@ -1,0 +1,81 @@
+﻿@model Web_final.Models.Product
+
+@{
+    ViewData["Title"] = "DisplayProd";
+    Layout = "~/Areas/Admin/Views/Share/_LayoutAdmin.cshtml";
+}
+<div class="row">
+    <div class="col-5">
+        <h2>CHI TIẾT SẢN PHẨM</h2>
+    </div>
+</div>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <h6>Tên sản phẩm</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NamePro)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Số lượng</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nums)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Giá</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Chi tiết</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+        <dt class = "col-sm-2">
+           <h6>Hình ảnh sản phẩm</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="~/images/product/@Model.Img1" class="img1" width="15%" />
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Hình ảnh chi tiết 1</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="~/images/product/@Model.Img2" class="img1" width="15%" />
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Hình ảnh chi tiết 2</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="~/images/product/@Model.Img3" class="img1" width="15%" />
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Số lượng đặt</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Order)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Đường dẫn</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Hiển thị(0: YES)</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hide)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="updateprod" asp-route-id="@Model.IdPro" class="btn btn-b">Chỉnh sửa</a> |
+    <a asp-action="manageproduct" class="btn btn-b">Quay lại</a>
+</div>

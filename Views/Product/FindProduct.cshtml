@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "FindProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Web_final.ViewModels.ProductViewModel
+<div class="product_section layout_padding">
+    <div class="container">
+        
+        <form asp-action="FindProduct" method="get" class="from-inline">Nhập tên sản phẩm: <input type="text" name="name" /><button class="btn-b"> Tìm kiếm</button></form>
+        <div class="product_section_2 layout_padding">
+            <div class="row">
+                <div class="col-sm-12">
+                    @if (!string.IsNullOrEmpty(ViewBag.SearchName))
+                    {
+                        <h1 class="product_taital">Kết quả tìm kiếm cho: @ViewBag.SearchName</h1>
+                    }
+                </div>
+                <div class="row">
+                    @foreach (var item in Model.Prods)
+                    {
+
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="product_box" style="text-align: center">
+                                <img src="~/images/product/@item.Img1" class="img1"
+                                     alt="@item.NamePro">
+                                <h4>@item.NamePro</h4>
+                                <p><b>Giá: @string.Format("{0:N0}", item.Price) VNĐ</b></p>
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                        <ul>
+                                            <li class="active"><a href="san-pham/@item.Link-@item.IdPro">Xem chi tiết</a></li>
+                                            <li><a href="/them-gio-hang?ProductId=@item.IdPro&Quantity=1">Thêm vào giỏ hàng</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

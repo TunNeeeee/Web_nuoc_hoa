@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Web_final.Models.Cart>
+
+@{
+    ViewData["Title"] = "QLOder";
+    Layout = "~/Areas/Admin/Views/Share/_LayoutAdmin.cshtml";
+}
+<style>
+    .customer-name {
+        margin-bottom: 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd; /* Đường viền cho bảng */
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd; /* Đường viền dưới cho hàng */
+    }
+
+    th {
+        background-color: #f8e5d7; /* Màu nền cho header */
+    }
+    }
+</style>
+@foreach (var cart in Model)
+{
+    var customerName = cart.IdUsersNavigation.Name;
+    decimal totalAmount = 0;
+    <table>
+        <tr class="tr-name">
+            <td>
+                <b>Khách hàng: @customerName</b>
+            </td>
+            <td>
+                Ngày đặt hàng: @cart.Datebegin
+            </td>
+        </tr>
+        <tr>
+            <th>Tên sản phẩm </th>
+            <th>Số lượng mua </th>
+            <th>Giá</th>
+            <th>Thành tiền</th>
+        </tr>
+        
+        @foreach (var item in cart.CartDetails)
+        {
+            decimal totalPrice = item.IdProNavigation.Price.GetValueOrDefault(0) * (decimal)item.SoldNum;
+            totalAmount += totalPrice;
+            <tr>
+                <td>@item.IdProNavigation.NamePro</td>
+                <td>@item.SoldNum</td>
+                <td>@item.IdProNavigation.Price</td>
+                <td>
+                    @String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),
+                             "{0:c}", item.IdProNavigation.Price.GetValueOrDefault(0) * item.SoldNum)
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="3">Tổng Tiền:</td>
+            <td>@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", totalAmount)</td>
+        </tr>
+    </table>
+    
+}
+<div class="row">
+    <div class="col-md-3"><b>TỔNG DOANH THU:</b></div>
+
+    <div class="total-revenue">
+        @String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", Model.Sum(c => c.CartDetails.Sum(cd => cd.IdProNavigation.Price.GetValueOrDefault(0) * (decimal)cd.SoldNum)))
+    </div>
+</div>

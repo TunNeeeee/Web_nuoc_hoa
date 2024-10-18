@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Web_final.ViewModels.BlogViewModel
+@{
+    ViewData["Title"] = "Bài viết";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="customer_taital">Tất cả bài viết</h1>
+    </div>
+</div>
+<div class="about_section layout_padding">
+    <div class="container">
+        <div class="about_section_main">
+            @foreach (var item in Model.Bloggs)
+            {
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about_taital_main">
+                            <h1 class="about_taital">@item.Title</h1>
+                            <p class="about_text">@item.Description</p>
+                            <div class="readmore_bt"><a href="bai-viet/@item.Link-@item.IdBlog">Đọc thêm</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div><img src="~/images/@item.Img" class="image_3"></div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

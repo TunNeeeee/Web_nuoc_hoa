@@ -1,0 +1,48 @@
+﻿@using System.Security.Claims
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Web_final.ViewModels.LHViewModel
+<nav class="navbar navbar-dark justify-content-between" style="background-color: #f8e5d7">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        @foreach (var item in Model.Menus)
+        {
+            <a href="/@item.Link">@item.Title</a>
+        }
+    </div>
+    <span class="toggle_icon" onclick="openNav()"><img src="~/images/toggle-icon.png"></span>
+    <a class="logo" href="trang-chu"><img src="~/images/logo2.png"></a></a>
+    <form class="form-inline ">
+        <div class="login_text" style="color:black">
+            @if (User.Identity.IsAuthenticated)
+            {
+                string username = User.Identity.Name;
+                string permission = User.FindFirst(ClaimTypes.Role)?.Value;
+                if (permission == "1")
+                {
+                    <li><a href="quan-tri"><span class="glyphicon glyphicon-cog"></span></a></li>
+                }
+                else
+                {
+                    <li><a href="gio-hang"><img src="~/images/bag-icon.png"></a></li>
+                    <li><a href="tim-kiem"><img src="~/images/search-icon.png"></a></li>
+                }
+                <li>
+                    <a href="thong-tin">
+                        <span class="glyphicon glyphicon-user"></span>
+                        @username
+                    </a>
+                </li>
+                <li><a href="dang-xuat"><b>Log out</b></a></li>
+            }
+            else
+            {
+                <ul>
+                    <li><a href="dang-nhap"><img src="~/images/user-icon.png"></a></li>
+                </ul>
+            }
+        </div>
+    </form>
+</nav>

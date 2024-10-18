@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Web_final.Ph>
+
+@{
+    ViewData["Title"] = "QLPH";
+    Layout = "~/Areas/Admin/Views/Share/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-5">
+        <h2>QUẢN LÝ PHẢN HỒI</h2>
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <h6>Tên khách hàng</h6>
+            </th>
+            <th>
+                <h6>Nội dung phản hồi</h6>
+            </th>
+            <th>
+                <h6>Hiển thị(0: YES)</h6>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdUsersNavigation.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NdPh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hide)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

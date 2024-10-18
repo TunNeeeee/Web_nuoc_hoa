@@ -1,0 +1,81 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Web_final.ViewModels.ProductViewModel
+
+@foreach (var item in Model.Prods)
+{
+    <div class="row">
+        <div class="col-md-0.75"></div>
+        <div class="col-md-4">
+            <h5><a href="/trang-chu">Trang chủ</a> > @item.NamePro </h5>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img id="mainImage" src="~/images/product/@item.Img1" alt="MainImage" class="img-responsive main-image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <img src="~/images/product/@item.Img2" alt="Thumbnail 1"
+                         class="img-responsive thumbnail" onclick="changeImage(this)">
+                </div>
+                <div class="col-md-6">
+                    <img src="~/images/product/@item.Img3" alt="Thumbnail 2"
+                         class="img-responsive thumbnail" onclick="changeImage(this)">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>@item.NamePro</h3>
+            <h5>
+                <b>Tình trạng: </b>Còn hàng
+            </h5>
+            <h5>
+                <i style="font-weight: bold;">Giá: @string.Format("{0:N0}", (float)item.Price) VNĐ</i>
+            </h5>
+            <h6>
+                @Html.Raw(item.Detail)
+            </h6>
+            <h5>
+                <b>Xuất xứ:</b> <button class="btn-light">Pháp</button>
+            <h5>
+                <b>Dung tích:</b> <button class="btn-light">100 ml</button>
+            </h5>
+
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8">
+                        <a class="btn btn-b" href="/them-gio-hang?ProductId=@item.IdPro&Quantity=1">
+                            <i class="fa fa-spin fa-spinner"></i> Mua
+                            ngay
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+}
+@section scripts {
+    <script>
+        function changeImage(img) {
+            var mainImage = document.getElementById('mainImage');
+            var tempSrc = mainImage.src;
+            mainImage.src = img.src;
+            img.src = tempSrc;
+        }
+    </script>
+}

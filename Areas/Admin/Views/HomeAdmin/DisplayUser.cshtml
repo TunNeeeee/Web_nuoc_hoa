@@ -1,0 +1,76 @@
+﻿@model Web_final.User
+
+@{
+    ViewData["Title"] = "DisplayUser";
+    Layout = "~/Areas/Admin/Views/Share/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-5">
+        <h2>CHI TIẾT TÀI KHOẢN NGƯỜI DÙNG</h2>
+    </div>
+</div>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+             <h6>Tên đăng nhập</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Mật khẩu</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Tên người dùng</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Địa chỉ</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Email</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Điện thoại</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Quyền Admin</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Permission)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Hiển thị</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hide)
+        </dd>
+        <dt class = "col-sm-2">
+            <h6>Hình ảnh đại diện</h6>
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="~/images/kh/@Model.Img" class="img" />
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="updateuser" asp-route-id="@Model.IdUsers" class="btn btn-b">Chỉnh sửa</a> |
+    <a asp-action="manageuser" class="btn btn-b">Quay lại</a>
+</div>

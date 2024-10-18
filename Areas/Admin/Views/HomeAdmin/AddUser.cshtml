@@ -1,0 +1,99 @@
+﻿@model Web_final.User
+
+@{
+    ViewData["Title"] = "AddUser";
+    Layout = "~/Areas/Admin/Views/Share/_LayoutAdmin.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="row">
+    <div class="col-5">
+        <h2>THÊM TÀI KHOẢN MỚI</h2>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddUser" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="col-md-4 col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="col-md-4 col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Permission" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Permission" class="form-control" />
+                    <span asp-validation-for="Permission" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Hide" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Hide" class="form-control" />
+                    <span asp-validation-for="Hide" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Img" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input type="file" asp-for="Img" class="form-control" />
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tạo" class="btn btn-b" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="manageuser" class="btn btn-b">Quay lại</a>
+</div>
+

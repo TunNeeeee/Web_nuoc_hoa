@@ -1,0 +1,94 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Web_final.ViewModels.ProductViewModel
+<div class="product_section layout_padding">
+    <div class="row">
+        <div class="col-3">
+            <label for="id_cat">Phân loại:</label>
+            <select id="id_cat" name="id_cat">
+                <option value="-1">Tất cả</option>
+                <option value="1">Nước hoa Nam</option>
+                <option value="2">Nước hoa Nữ</option>
+                <option value="3">Nước hoa Unisex</option>
+            </select>
+        </div>
+
+        <div class="col-6">
+            <label for="price_from">Giá từ:</label>
+            <input type="number" id="price_from" name="price_from" min="0" max="100000000" value="0"> VNĐ
+            ~
+            <input type="number" id="price_to" name="price_to" min="0" max="100000000" value="100000000"> VNĐ
+            <button id="Confirm" class="btn btn-b">Lọc</button>
+        </div>
+
+        <div class="col-9">
+            <div class="container">
+
+                <div class="product_section_2 layout_padding">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1 class="product_taital">TẤT CẢ SẢN PHẨM</h1>
+                            <p class="product_text">Dòng nước hoa cao cấp Giovanni</p>
+                        </div>
+                        <div class="row col-12">
+                            @foreach (var item in Model.Prods)
+                            {
+
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="product_box" style="text-align: center">
+                                        <img src="~/images/product/@item.Img1" class="img1"
+                                             alt="@item.NamePro">
+                                        <h6>@item.NamePro</h6>
+                                        <p><b>Giá: @string.Format("{0:N0}", item.Price) VNĐ</b></p>
+                                        <div class="btn_main">
+                                            <div class="buy_bt">
+                                                <ul>
+                                                    <li class="active "><a href="san-pham/@item.Link-@item.IdPro">Xem chi tiết</a></li>
+                                                    <li><a href="/them-gio-hang?ProductId=@item.IdPro&Quantity=1">Thêm vào giỏ hàng</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="panel-footer text-center">
+                            <ul class="pagination pagination-centered">
+                                @for (int i = 1; i <= Model.PaginationInfo.TotalPages; i++)
+                                {
+                                    <li @(i == Model.PaginationInfo.CurrentPage ? "class=active" : "")>
+                                        <a href="?page=@i&id_cat=@Model.ProductFilter.id_cat&price_from=@Model.ProductFilter.price_from&price_to=@Model.ProductFilter.price_to">@i</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var Confirm = document.getElementById('Confirm');
+
+            Confirm.addEventListener('click', function () {
+                updateUrl();
+            });
+
+            function updateUrl() {
+                var id_cat = document.getElementById('id_cat').value;
+                var priceFrom = document.getElementById('price_from').value;
+                var priceTo = document.getElementById('price_to').value;
+
+                var newUrl = window.location.origin + window.location.pathname + '?page=1' + '&id_cat=' + id_cat;
+                newUrl += '&price_from=' + priceFrom;
+                newUrl += '&price_to=' + priceTo;
+
+                window.location.href = newUrl;
+            }
+        });
+    </script>
+</div>

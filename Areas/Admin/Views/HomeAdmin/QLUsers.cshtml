@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Web_final.User>
+
+@{
+    ViewData["Title"] = "QLUsers";
+    Layout = "~/Areas/Admin/Views/Share/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-5">
+        <h2>QUẢN LÝ NGƯỜI DÙNG</h2>
+    </div>
+</div>
+
+
+<p>
+    <a asp-action="adduser" class="btn btn-b">Tạo một tài khoản mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <h6>Tên đăng nhập</h6>
+            </th>
+            <th>
+                <h6>Mật khẩu</h6>
+            </th>
+            <th>
+                <h6>Tên người dùng</h6>
+            </th>
+            <th>
+                <h6>Địa chỉ</h6>
+            </th>
+            <th>
+                <h6>Email</h6>
+            </th>
+            <th>
+                <h6>Điện thoại</h6>
+            </th>
+            <th>
+                <h6>Quyền Admin</h6>
+            </th>
+            <th>
+                <h6>Hiển thị</h6>
+            </th>
+            <th>
+                <h6>Hình ảnh đại diện</h6>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Permission)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hide)
+                </td>
+                <td>
+                    <img src="~/images/kh/@item.Img" class="img" />
+                </td>
+                <td>
+                    <a asp-action="UpdateUser" asp-route-id="@item.IdUsers" class="btn btn-b">Chỉnh Sửa</a>
+                    <a asp-action="DisplayUser" asp-route-id="@item.IdUsers" class="btn btn-b">Chi Tiết</a>
+                    <a asp-action="DeleteUser" asp-route-id="@item.IdUsers" class="btn btn-b">Xóa Tài Khoản</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

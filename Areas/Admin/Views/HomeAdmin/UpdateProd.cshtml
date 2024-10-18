@@ -1,0 +1,112 @@
+﻿@model Web_final.Models.Product
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "UpdateProd";
+    Layout = "~/Areas/Admin/Views/Share/_LayoutAdmin.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="row">
+    <div class="col-5">
+        <h2>CẬP NHẬT SẢN PHẨM</h2>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateProd" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdPro" />
+            <div class="form-group">
+                <label asp-for="NamePro" class="col-md-4 control-label">Tên sản phẩm</label>
+                <div class="col-md-8">
+                    <input asp-for="NamePro" class="form-control" />
+                    <span asp-validation-for="NamePro" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Nums" class="col-md-5 control-label">Số lượng trong kho</label>
+                <div class="col-md-8">
+                    <input asp-for="Nums" class="form-control" />
+                    <span asp-validation-for="Nums" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="col-md-4 control-label">Giá</label>
+                <div class="col-md-8">
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Detail" class="col-md-4 control-label">Mô tả</label>
+                <div class="col-md-8">
+                    <input asp-for="Detail" class="form-control" />
+                    <span asp-validation-for="Detail" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Img1" class="col-md-5 control-label">Hình ảnh đại diện</label>
+                <div class="col-md-8">
+                    <input type="file" asp-for="Img1" class="form-control" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Img2" class="col-md-6 control-label">Hình ảnh chi tiết 1</label>
+                <div class="col-md-8">
+                    <input type="file" asp-for="Img2" class="form-control" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Img3" class="col-md-6 control-label">Hình ảnh chi tiết 2</label>
+                <div class="col-md-8">
+                    <input type="file" asp-for="Img3" class="form-control" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Order" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <input asp-for="Order" class="form-control" />
+                    <span asp-validation-for="Order" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Link" class="col-md-4 control-label">Đường dẫn</label>
+                <div class="col-md-8">
+                    <input asp-for="Link" class="form-control" />
+                    <span asp-validation-for="Link" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Hide" class="col-md-4 control-label">Hiển thị(0: Yes)</label>
+                <div class="col-md-8">
+                    <input asp-for="Hide" class="form-control" />
+                    <span asp-validation-for="Hide" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCat" class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <select asp-for="IdCat" class="form-control" asp-items="ViewBag.IdCat">Loại</select>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-b">Cập nhật</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="manageproduct">Quay lại</a>
+</div>
+
