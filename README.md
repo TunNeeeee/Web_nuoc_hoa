@@ -33,7 +33,7 @@ Hệ thống **Bán Nước Hoa Trực Tuyến** là một ứng dụng web full
 3. Chạy ứng dụng trực tiếp trên trình duyệt bằng cách mở tệp HTML chính.
 ---
 ## Cách Sử Dụng
-Sau khi cài đặt và chạy thành công cả backend và frontend, hệ thống có thể truy cập qua trình duyệt tại địa chỉ http://localhost:5000. Dưới đây là một số hình ảnh của hệ thống:
+Sau khi cài đặt và chạy thành công cả backend và frontend, hệ thống có thể truy cập qua trình duyệt tại địa chỉ http://localhost:5057. Dưới đây là một số hình ảnh của hệ thống:
 
 
 Trang Chính:
