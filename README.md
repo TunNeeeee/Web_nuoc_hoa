@@ -43,11 +43,12 @@ Trang Chính:
 ![Screenshot 2024-10-19 063205](https://github.com/user-attachments/assets/d3133c30-fff6-4d32-a902-66eb40fa0bd4)
 Danh Mục Sản Phẩm:
 
+![Screenshot 2024-10-19 070718](https://github.com/user-attachments/assets/e7ba899c-a1b0-498b-9111-05e924e1e715)
 
 
 Tìm Kiếm và Lọc Sản Phẩm:
 
-
+![Screenshot 2024-10-19 070941](https://github.com/user-attachments/assets/9a48f947-4cfe-4cc5-a909-cab21105c8f4)
 
 Chi Tiết Sản Phẩm:
 
@@ -55,7 +56,7 @@ Chi Tiết Sản Phẩm:
 
 Giỏ Hàng:
 
-
+![Screenshot 2024-10-19 071031](https://github.com/user-attachments/assets/1da996f1-00ca-4d1f-bebc-a433d25d8100)
 
 Thanh Toán:
 
