@@ -51,7 +51,7 @@ Tìm Kiếm và Lọc Sản Phẩm:
 ![Screenshot 2024-10-19 070941](https://github.com/user-attachments/assets/9a48f947-4cfe-4cc5-a909-cab21105c8f4)
 
 Chi Tiết Sản Phẩm:
-![Screenshot 2024-10-19 071306](https://github.com/user-attachments/assets/91ac1f70-7169-4171-9ca2-fb201f418a43)
+
 
 
 Giỏ Hàng:
@@ -60,15 +60,18 @@ Giỏ Hàng:
 
 Thanh Toán:
 
-![Screenshot 2024-10-19 071553](https://github.com/user-attachments/assets/31a7d2df-58d7-4ff9-979a-dc1e5af82b91)
-![Screenshot 2024-10-19 071320](https://github.com/user-attachments/assets/10367347-1c12-421f-9857-3f673ee26d57)
+
 
 Quản Lý Đơn Hàng:
 
-
+![Screenshot 2024-10-19 071553](https://github.com/user-attachments/assets/31a7d2df-58d7-4ff9-979a-dc1e5af82b91)
 
 Trang Quản Trị:
-
+![Screenshot 2024-10-19 071306](https://github.com/user-attachments/assets/91ac1f70-7169-4171-9ca2-fb201f418a43)
+![Screenshot 2024-10-19 071356](https://github.com/user-attachments/assets/521f02e8-9b75-496d-8d83-320c23760704)
+![Screenshot 2024-10-19 071553](https://github.com/user-attachments/assets/31a7d2df-58d7-4ff9-979a-dc1e5af82b91)
+![Screenshot 2024-10-19 071320](https://github.com/user-attachments/assets/10367347-1c12-421f-9857-3f673ee26d57)
+![Screenshot 2024-10-19 071009](https://github.com/user-attachments/assets/3f731205-6f6d-4ad9-91d6-e5402873021c)
 
 ---
 ## Người thực hiện
