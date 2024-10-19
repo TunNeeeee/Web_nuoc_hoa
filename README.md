@@ -60,17 +60,19 @@ Giỏ Hàng:
 
 Thanh Toán:
 
+![Screenshot 2024-10-19 071048](https://github.com/user-attachments/assets/008eaf86-5f8c-4f7f-8914-86f4a31e9429)
+![Screenshot 2024-10-19 071102](https://github.com/user-attachments/assets/6c44d91b-0f1a-478f-9aad-80d637efbb7f)
 
+Trang Quản Trị:
+![Screenshot 2024-10-19 071306](https://github.com/user-attachments/assets/91ac1f70-7169-4171-9ca2-fb201f418a43)
+![Screenshot 2024-10-19 071553](https://github.com/user-attachments/assets/31a7d2df-58d7-4ff9-979a-dc1e5af82b91)
+![Screenshot 2024-10-19 071320](https://github.com/user-attachments/assets/10367347-1c12-421f-9857-3f673ee26d57)
 
 Quản Lý Đơn Hàng:
 
 ![Screenshot 2024-10-19 071356](https://github.com/user-attachments/assets/521f02e8-9b75-496d-8d83-320c23760704)
 
-Trang Quản Trị:
-![Screenshot 2024-10-19 071306](https://github.com/user-attachments/assets/91ac1f70-7169-4171-9ca2-fb201f418a43)
-![Screenshot 2024-10-19 071356](https://github.com/user-attachments/assets/521f02e8-9b75-496d-8d83-320c23760704)
-![Screenshot 2024-10-19 071553](https://github.com/user-attachments/assets/31a7d2df-58d7-4ff9-979a-dc1e5af82b91)
-![Screenshot 2024-10-19 071320](https://github.com/user-attachments/assets/10367347-1c12-421f-9857-3f673ee26d57)
+
 
 
 ---
