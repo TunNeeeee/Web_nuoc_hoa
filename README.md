@@ -8,7 +8,7 @@ Hệ thống **Bán Nước Hoa Trực Tuyến** là một ứng dụng web full
 - **Bài học:** Qua dự án này, tôi đã học được cách xây dựng hệ thống mua sắm trực tuyến bằng công nghệ C#, xử lý các quy trình bán hàng, quản lý giỏ hàng, và tích hợp các phương thức thanh toán.
 ---
 ## Mục Lục
-- [Cài Đặt](#caidat)
+- [Cài Đặt](#CàiĐặt)
 - [Cách Sử Dụng](#cachsudung)
 - [Người Thực Hiện](#nguoithuchien)
 - [Tính Năng](#tinhnang)
@@ -78,7 +78,7 @@ Quản Lý Đơn Hàng:
 ---
 ## Người thực hiện
 - **[Nguyễn Đình Tuấn](https://github.com/TunNeeeee)** - Trưởng Nhóm/Fullstack
-- **Nguyễn Quốc Cường** - Frontend
+- **Trần Quang Vũ** - Frontend
 - **Nguyễn Hoàng Huy** - Frontend
 ---
 ## Tính Năng
