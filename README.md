@@ -8,10 +8,10 @@ Hệ thống **Bán Nước Hoa Trực Tuyến** là một ứng dụng web full
 - **Bài học:** Qua dự án này, tôi đã học được cách xây dựng hệ thống mua sắm trực tuyến bằng công nghệ C#, xử lý các quy trình bán hàng, quản lý giỏ hàng, và tích hợp các phương thức thanh toán.
 ---
 ## Mục Lục
-- [Cài Đặt](#CàiĐặt)
-- [Cách Sử Dụng](#cachsudung)
-- [Người Thực Hiện](#nguoithuchien)
-- [Tính Năng](#tinhnang)
+- [Cài Đặt](#cài-đặt)
+- [Cách Sử Dụng](#cách-sử-dụng)
+- [Người Thực Hiện](#người-thực-hiện)
+- [Tính Năng](#tính-năng)
 ---
 ## Cài Đặt
 ### Backend (ASP.NET Core)
